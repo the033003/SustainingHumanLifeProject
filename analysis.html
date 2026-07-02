@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analysis - GESCI Project</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #2e8b57;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #3cb371;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        section {
+            background: white;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2e8b57;
+        }
+        canvas {
+            max-width: 100%;
+            margin: 1rem 0;
+        }
+        footer {
+            background-color: #2e8b57;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Data Analysis</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="data.html">Raw Data</a></li>
+            <li><a href="analysis.html">Data Analysis</a></li>
+            <li><a href="reflection.html">Reflections</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h2>Key Insights</h2>
+            <p>Replace with your actual findings from the data.</p>
+            <ul>
+                <li>Total spending: $XXX</li>
+                <li>Total waste: XX lbs</li>
+                <li>Biggest waste categories: ...</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Spending by Category</h2>
+            <canvas id="spendingChart" width="400" height="200"></canvas>
+        </section>
+        
+        <section>
+            <h2>Waste Trends Over the Month</h2>
+            <canvas id="wasteChart" width="400" height="200"></canvas>
+        </section>
+    </div>
+
+    <script>
+        // Spending Chart
+        new Chart(document.getElementById('spendingChart'), {
+            type: 'pie',
+            data: {
+                labels: ['Produce', 'Dairy', 'Meat', 'Grains', 'Snacks'],
+                datasets: [{
+                    data: [120, 85, 95, 60, 40],
+                    backgroundColor: ['#2e8b57', '#3cb371', '#66cdaa', '#98fb98', '#90ee90']
+                }]
+            },
+            options: { responsive: true }
+        });
+
+        // Waste Trend Chart
+        new Chart(document.getElementById('wasteChart'), {
+            type: 'line',
+            data: {
+                labels: ['Week 1', 'Week 2', 'Week 3', 'Week 4'],
+                datasets: [{
+                    label: 'Waste (lbs)',
+                    data: [12, 8, 5, 3],
+                    borderColor: '#2e8b57',
+                    tension: 0.1
+                }]
+            },
+            options: { responsive: true }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2026 GESCI Sustaining Human Life Project</p>
+    </footer>
+</body>
+</html>
