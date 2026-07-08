@@ -5,68 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raw Data - GESCI Project</title>
     <style>
+        :root {
+            --green-dark: #2e8b57;
+            --green-medium: #3cb371;
+            --green-light: #66c78a;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9f8;
             color: #333;
+            line-height: 1.6;
         }
+
         header {
-            background-color: #2e8b57;
+            background-color: var(--green-dark);
             color: white;
-            padding: 1rem;
+            padding: 1.2rem 0;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
         nav {
-            background-color: #3cb371;
-            padding: 0.5rem;
+            background-color: var(--green-medium);
+            padding: 0.75rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
+
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
             justify-content: center;
+            gap: 2rem;
         }
-        nav ul li {
-            margin: 0 1rem;
-        }
+
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
+
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
         .container {
             max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
         }
+
         section {
             background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--green-dark);
         }
-        h1, h2 {
-            color: #2e8b57;
+
+        h1, h2, h3 {
+            color: var(--green-dark);
+            margin-top: 0;
         }
+
+        h2 {
+            border-bottom: 3px solid var(--green-light);
+            padding-bottom: 0.75rem;
+            display: inline-block;
+        }
+
         img {
             max-width: 100%;
             height: auto;
             border: 1px solid #ddd;
-            margin: 1rem 0;
-            border-radius: 4px;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
+
         footer {
-            background-color: #2e8b57;
+            background-color: var(--green-dark);
             color: white;
             text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 1.5rem 1rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
@@ -86,22 +130,16 @@
 
     <div class="container">
         <section>
-            <h2>Google Sheets Screenshots</h2>
-            <p>Upload your Google Sheets screenshots to the repository and link them here. Replace the placeholder images below.</p>
+            <h2>Google Sheets</h2>
+            <p>Below is the data collected for food waste and spending.</p>
             
-            <h3>Weekly Spending and Waste Log</h3>
-            <img src="https://picsum.photos/id/201/800/600" alt="Data Screenshot 1">
-            
-            <h3>Monthly Summary Table</h3>
-            <img src="https://picsum.photos/id/202/800/600" alt="Data Screenshot 2">
-            
-            <h3>Itemized Purchases</h3>
-            <img src="https://picsum.photos/id/203/800/600" alt="Data Screenshot 3">
+            <h3>Spending and Waste Log</h3>
+            <img src="fooddata.png" alt="Data Screenshot">
         </section>
         
         <section>
             <h2>Data Collection Notes</h2>
-            <p>Describe your tracking method here: What categories did you track? (e.g., groceries by type, waste by weight, meals prepared, etc.)</p>
+            <p>As pictured above, the different categories tracked were food purchased, servings for purchase, total price, calories per serving, total mass, and mass wasted.</p>
         </section>
     </div>
 

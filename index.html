@@ -5,74 +5,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GESCI Project - Sustaining Human Life</title>
     <style>
+        :root {
+            --green-dark: #2e8b57;
+            --green-medium: #3cb371;
+            --green-light: #66c78a;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-color: #f8f9f8;
             color: #333;
+            line-height: 1.6;
         }
+
         header {
-            background-color: #2e8b57;
+            background-color: var(--green-dark);
             color: white;
-            padding: 1rem;
+            padding: 1.2rem 0;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+
         nav {
-            background-color: #3cb371;
-            padding: 0.5rem;
+            background-color: var(--green-medium);
+            padding: 0.75rem 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
+
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
             display: flex;
             justify-content: center;
+            gap: 2rem;
         }
-        nav ul li {
-            margin: 0 1rem;
-        }
+
         nav ul li a {
             color: white;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
+
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), 
+                        url('https://picsum.photos/id/1015/1200/500') center/cover no-repeat;
+            color: white;
+            padding: 6rem 1rem 5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 3.2rem;
+            margin: 0 0 1rem 0;
+            font-weight: 700;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.7);
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.35rem;
+            margin: 0;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .container {
             max-width: 1200px;
-            margin: 2rem auto;
-            padding: 1rem;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
         }
+
         section {
             background: white;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--green-dark);
         }
-        h1, h2 {
-            color: #2e8b57;
+
+        h2 {
+            color: var(--green-dark);
+            margin-top: 0;
+            font-size: 1.8rem;
+            border-bottom: 3px solid var(--green-light);
+            padding-bottom: 0.75rem;
+            display: inline-block;
         }
+
+        ul {
+            padding-left: 1.2rem;
+        }
+
+        ul li {
+            margin-bottom: 0.6rem;
+        }
+
         footer {
-            background-color: #2e8b57;
+            background-color: var(--green-dark);
             color: white;
             text-align: center;
-            padding: 1rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 1.5rem 1rem;
+            margin-top: 3rem;
         }
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://picsum.photos/id/1015/1200/400');
-            background-size: cover;
-            color: white;
-            padding: 4rem 1rem;
-            text-align: center;
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.4rem;
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>GESCI Project: Minimizing Food Waste & Optimizing Spending</h1>
+        <h1>GESCI Project: Minimizing Food Waste &amp; Optimizing Spending</h1>
     </header>
     
     <nav>
@@ -85,25 +163,22 @@
     </nav>
 
     <div class="hero">
-        <h2>Tracking a Month of Sustainable Living</h2>
-        <p>Reducing food waste and smart spending habits</p>
+        <div class="hero-content">
+            <h2>Tracking a Month of Sustainable Living</h2>
+            <p>Reducing food waste to spend less.</p>
+        </div>
     </div>
 
     <div class="container">
         <section>
             <h2>Project Overview</h2>
             <p>This project tracks daily food purchases, consumption, and waste over one month to identify patterns, reduce waste, and optimize budget.</p>
-            <p>Key goals:</p>
+            <p><strong>Key goals:</strong></p>
             <ul>
-                <li>Minimize food waste</li>
-                <li>Optimize grocery spending</li>
-                <li>Promote sustainable habits</li>
+                <li>Minimize food waste through better planning</li>
+                <li>Optimize grocery spending without sacrificing nutrition</li>
+                <li>Promote sustainable and mindful consumption habits</li>
             </ul>
-        </section>
-        
-        <section>
-            <h2>Quick Stats</h2>
-            <p>Placeholders - replace with actual data from your tracking.</p>
         </section>
     </div>
 
