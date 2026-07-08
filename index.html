@@ -29,9 +29,17 @@
         }
 
         header h1 {
-            margin: 0;
-            font-size: 1.8rem;
+            margin: 0.3rem 0 0.4rem 0;
+            font-size: 1.75rem;
             font-weight: 600;
+        }
+
+        .project-team {
+            color: #c1e1c1;
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 0;
+            letter-spacing: 0.5px;
         }
 
         nav {
@@ -120,12 +128,17 @@
             display: inline-block;
         }
 
-        ul {
-            padding-left: 1.2rem;
+        .team {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
         }
 
-        ul li {
-            margin-bottom: 0.6rem;
+        .team-member {
+            text-align: center;
+            font-size: 1.1rem;
         }
 
         footer {
@@ -151,6 +164,7 @@
 <body>
     <header>
         <h1>GESCI Project: Minimizing Food Waste &amp; Optimizing Spending</h1>
+        <p class="project-team">by Brent Lease &amp; Luke Blackburn</p>
     </header>
     
     <nav>
@@ -165,25 +179,36 @@
     <div class="hero">
         <div class="hero-content">
             <h2>Tracking a Month of Sustainable Living</h2>
-            <p>Reducing food waste to spend less.</p>
+            <p>Reducing food waste and building smarter spending habits</p>
         </div>
     </div>
 
     <div class="container">
         <section>
             <h2>Project Overview</h2>
-            <p>This project tracks daily food purchases, consumption, and waste over one month to identify patterns, reduce waste, and optimize budget.</p>
-            <p><strong>Key goals:</strong></p>
+            <p>This group project tracks daily food purchases, consumption, and waste over one month. The goal was to identify spending patterns, minimize food waste, and develop more sustainable consumption habits.</p>
+            
+            <p><strong>Key Goals:</strong></p>
             <ul>
-                <li>Minimize food waste through better planning</li>
-                <li>Optimize grocery spending without sacrificing nutrition</li>
-                <li>Promote sustainable and mindful consumption habits</li>
+                <li>Minimize food waste through better planning and portion awareness</li>
+                <li>Optimize grocery spending without sacrificing nutrition or quality</li>
+                <li>Promote mindful and sustainable living habits</li>
             </ul>
+
+            <h2 style="margin-top: 2rem;">Project Team</h2>
+            <div class="team">
+                <div class="team-member">
+                    <strong>Brent Lease</strong>
+                </div>
+                <div class="team-member">
+                    <strong>Luke Blackburn</strong>
+                </div>
+            </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 GESCI Sustaining Human Life Project</p>
+        <p>&copy; 2026 GESCI Sustaining Human Life Project | Brent Lease &amp; Luke Blackburn</p>
     </footer>
 </body>
 </html>
